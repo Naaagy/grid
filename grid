@@ -1,0 +1,58 @@
+2*2
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid-2x2 div {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+3*4
+.grid-3x4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px; 
+}
+
+.grid-3x4 div {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+Négyzetrácsos 
+.grid-pattern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-pattern div {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-pattern div:nth-child(1),
+.grid-pattern div:nth-child(3),
+.grid-pattern div:nth-child(5),
+.grid-pattern div:nth-child(7),
+.grid-pattern div:nth-child(9) {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.grid-pattern div:nth-child(2),
+.grid-pattern div:nth-child(4),
+.grid-pattern div:nth-child(6),
+.grid-pattern div:nth-child(8) {
+    grid-column: 1 / span 3;
+    grid-row: auto;
+}
